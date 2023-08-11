@@ -11,31 +11,47 @@ import pymongo
 from scrapy.utils.project import get_project_settings
 from pdfdrive.items import PdfdriveItem
 import json
+from scrapy.settings import Settings
+import logging
 
 settings = get_project_settings()
 
-class PdfdrivePipeline:
+class MongoDbPipeline:
 
 
-    def __init__(self) -> None:
-        conn = pymongo.MongoClient(
-            settings.get('MONGO_HOST'),
-            settings.get('MONGO_PORT')
+    collection_name = 'pdfdrive'
+
+    def __init__(self, mongo_uri, mongo_db):
+        self.mongo_uri = mongo_uri
+        self.mongo_db = mongo_db
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        ## pull in information from settings.py
+        return cls(
+            mongo_uri=crawler.settings.get('MONGO_URI'),
+            mongo_db=crawler.settings.get('MONGO_DATABASE')
         )
-        db = conn[settings.get('MONGO_DB_NAME')]
-        self.collection = db[settings['MONGO_COLLECTION_NAME']]
+
+    def open_spider(self, spider):
+        ## initializing spider
+        ## opening db connection
+        self.client = pymongo.MongoClient(self.mongo_uri)
+        self.db = self.client[self.mongo_db]
 
 
     def process_item(self, item, spider):
 
-        if isinstance(item, [PdfdriveItem]):
-
-            self.collection.insert_one(PdfdriveItem.toDict())
+        res = self.db[self.collection_name].insert_one(dict(item))
+        logging.debug(f"Properties added to MongoDB {res.inserted_id}")
         return item
 
 
 
+
+
 class JsonWriterPipeline:
+
     def open_spider(self, spider):
         self.file = open("items.jsonl", "w")
 
@@ -44,7 +60,6 @@ class JsonWriterPipeline:
 
     def process_item(self, item, spider):
 
-        if isinstance(item, PdfdriveItem):
-            line = json.dumps(item.toDict()) + "\n"
+        line = json.dumps(item) + "\n"
         self.file.write(line)
         return item
