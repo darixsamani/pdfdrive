@@ -12,6 +12,9 @@ BOT_NAME = "pdfdrive"
 SPIDER_MODULES = ["pdfdrive.spiders"]
 NEWSPIDER_MODULE = "pdfdrive.spiders"
 import os
+import dotenv
+
+dotenv.load_dotenv()
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -95,11 +98,11 @@ FEED_EXPORT_ENCODING = "utf-8"
 
 
 
-# MONGO_URI = os.environ.get("MONGO_URI")
-# MONGO_DATABASE = os.environ.get("MONGO_DATABASE")
+MONGO_URI = os.environ.get("MONGO_URI")
+MONGO_DATABASE = os.environ.get("MONGO_DATABASE")
 
-MONGO_URI = 'mongodb://localhost:27017'
-MONGO_DATABASE = "pdfdrive"
+# MONGO_URI = 'mongodb://localhost:27017'
+# MONGO_DATABASE = "pdfdrive"
 
 ITEM_PIPELINES = {
   "pdfdrive.pipelines.MongoDbPipeline": 1,
