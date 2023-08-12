@@ -10,7 +10,7 @@ class PdfdriveSpider(scrapy.Spider,):
     name = "pdfdrive"
 
     custom_settings = {
-    'LOG_FILE': 'logs/pdfdrivespider.log',
+    'LOG_FILE': 'pdfdrive/logs/pdfdrivespider.log',
     'LOG_LEVEL': 'DEBUG'
   }
 
