@@ -9,6 +9,11 @@ from pdfdrive.items import PdfdriveItem
 class PdfdriveSpider(scrapy.Spider,):
     name = "pdfdrive"
 
+    custom_settings = {
+    'LOG_FILE': 'logs/pdfdrivespider.log',
+    'LOG_LEVEL': 'DEBUG'
+  }
+
 
     def start_requests(self):
         
