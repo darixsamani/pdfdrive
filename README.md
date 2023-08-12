@@ -13,11 +13,11 @@ it's a web scraper that collects information on the pdfdrive.com site and then s
   ```
   pip3 install virtualenv
   ```
-2. Create virtual env
+2. Create  a virtual environment
 ```
 virtualenv env
 ```
-4. Active vituale enn
+4. activate a virtual environment
 ```
 source enc/bin/activate
 ```
@@ -26,7 +26,7 @@ source enc/bin/activate
 pip3 install -r requirements.txt
 ```
 6. Laucch Spider
-   Before modify  `.env` to your mondo de URI
+  Before changing `.env` to your URI mondo
 ```
 cd pdfdrive && scrapy crwal pdfdrive
 ```
