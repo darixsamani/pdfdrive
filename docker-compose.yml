@@ -4,7 +4,7 @@ services:
     build:
       context: .
     volumes:
-      - ./app : ./pdfdrive
+      - ./app : ./
     depends_on:
       - db
     environment:

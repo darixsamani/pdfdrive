@@ -26,7 +26,7 @@ source enc/bin/activate
 pip3 install -r requirements.txt
 ```
 6. Laucch Spider
-  Before changing `.env` to your URI mondo
+  Before changing `.env` to your URI mongodb
 ```
 cd pdfdrive && scrapy crwal pdfdrive
 ```
