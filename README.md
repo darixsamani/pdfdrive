@@ -36,5 +36,6 @@ cd pdfdrive && scrapy crwal pdfdrive
 
 ```
 docker pull darixsamani/pdfdrive
-docker run -it -e MONGO_URI=mongodb://localhost:27017 -e MONGO_DATABASE=pdfdrive darixsamani/pdfdrive
+docker run -itd -e MONGO_URI=mongodb://localhost:27017 -e MONGO_DATABASE=pdfdrive darixsamani/pdfdrive
 ```
+
