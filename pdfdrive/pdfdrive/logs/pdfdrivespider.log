@@ -1,0 +1,110 @@
+2023-08-12 12:48:25 [asyncio] DEBUG: Using selector: EpollSelector
+2023-08-12 12:48:25 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-08-12 12:48:25 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-08-12 12:48:25 [scrapy.extensions.telnet] INFO: Telnet Password: 3a7244780a197f34
+2023-08-12 12:48:26 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-08-12 12:48:26 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-08-12 12:48:26 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-08-12 12:48:26 [scrapy.middleware] INFO: Enabled item pipelines:
+['pdfdrive.pipelines.MongoDbPipeline', 'pdfdrive.pipelines.JsonWriterPipeline']
+2023-08-12 12:48:26 [scrapy.core.engine] INFO: Spider opened
+2023-08-12 12:48:26 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-08-12 12:48:26 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-08-12 12:48:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/robots.txt> (referer: None)
+2023-08-12 12:48:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/0> (referer: None)
+2023-08-12 12:48:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/5> (referer: None)
+2023-08-12 12:48:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/7> (referer: None)
+2023-08-12 12:48:27 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.pdfdrive.com:80
+2023-08-12 12:48:28 [urllib3.connectionpool] DEBUG: http://www.pdfdrive.com:80 "GET /how-successful-people-think-e18856437.html HTTP/1.1" 200 None
+2023-08-12 12:48:29 [root] DEBUG: Properties added to MongoDB 64d7718d9f293572fe1746da
+2023-08-12 12:48:29 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.pdfdrive.com/category/0>
+{'url_book': 'http://www.pdfdrive.com/how-successful-people-think-e18856437.html', 'size_book': '722 KB', 'year': '2012', 'number pages': '80 Pages', 'title': 'How Successful People Think', 'url_image': 'https://cdn.asaha.com/assets/thumbs/5bf/5bfa5937971eebc0977355d41d488da7-s.jpg', 'langage_book': 'English', 'tags': ['Academic & Education', 'Business & Career']}
+2023-08-12 12:48:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/4> (referer: None)
+2023-08-12 12:48:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/6> (referer: None)
+2023-08-12 12:48:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/8> (referer: None)
+2023-08-12 12:48:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/9> (referer: None)
+2023-08-12 12:48:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/10> (referer: None)
+2023-08-12 12:48:29 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.pdfdrive.com:80
+2023-08-12 12:48:30 [urllib3.connectionpool] DEBUG: http://www.pdfdrive.com:80 "GET /never-split-the-difference-negotiating-as-if-your-life-depended-on-it-e145171860.html HTTP/1.1" 200 None
+2023-08-12 12:48:30 [root] DEBUG: Properties added to MongoDB 64d7718e9f293572fe1746db
+2023-08-12 12:48:30 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.pdfdrive.com/category/0>
+{'url_book': 'http://www.pdfdrive.com/never-split-the-difference-negotiating-as-if-your-life-depended-on-it-e145171860.html', 'size_book': '1.32 MB', 'year': '2017', 'number pages': '375 Pages', 'title': 'Never Split the Difference: Negotiating As If Your Life Depended On It', 'url_image': 'https://cdn.asaha.com/assets/thumbs/10e/10edeea9ba31edcd27e615f89715c89b-s.jpg', 'langage_book': 'English', 'tags': ["Editor's Picks", 'Most Popular', 'Business & Career']}
+2023-08-12 12:48:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/1> (referer: None)
+2023-08-12 12:48:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/2> (referer: None)
+2023-08-12 12:48:30 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.pdfdrive.com:80
+2023-08-12 12:48:31 [urllib3.connectionpool] DEBUG: http://www.pdfdrive.com:80 "GET /php-mysql-javascript-html5-all-in-one-for-dummies-e18896179.html HTTP/1.1" 200 None
+2023-08-12 12:48:32 [root] DEBUG: Properties added to MongoDB 64d771909f293572fe1746dc
+2023-08-12 12:48:32 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.pdfdrive.com/category/0>
+{'url_book': 'http://www.pdfdrive.com/php-mysql-javascript-html5-all-in-one-for-dummies-e18896179.html', 'size_book': '13.86 MB', 'year': '2013', 'number pages': '724 Pages', 'title': 'PHP, MySQL, JavaScript & HTML5 All-In-One For Dummies', 'url_image': 'https://cdn.asaha.com/assets/thumbs/e1e/e1ec7abe963086aec83a0335c51d2fce-s.jpg', 'langage_book': 'English', 'tags': ['Technology', 'Software']}
+2023-08-12 12:48:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/11> (referer: None)
+2023-08-12 12:48:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/12> (referer: None)
+2023-08-12 12:48:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/13> (referer: None)
+2023-08-12 12:48:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/14> (referer: None)
+2023-08-12 12:48:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/15> (referer: None)
+2023-08-12 12:48:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/3> (referer: None)
+2023-08-12 12:48:32 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.pdfdrive.com:80
+2023-08-12 12:48:33 [urllib3.connectionpool] DEBUG: http://www.pdfdrive.com:80 "GET /101-activities-for-teaching-creativity-and-problem-solving-e9060354.html HTTP/1.1" 200 None
+2023-08-12 12:48:33 [root] DEBUG: Properties added to MongoDB 64d771919f293572fe1746dd
+2023-08-12 12:48:33 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.pdfdrive.com/category/0>
+{'url_book': 'http://www.pdfdrive.com/101-activities-for-teaching-creativity-and-problem-solving-e9060354.html', 'size_book': '3.69 MB', 'year': '2005', 'number pages': '410 Pages', 'title': '101 Activities For Teaching Creativity And Problem Solving', 'url_image': 'https://cdn.asaha.com/assets/thumbs/487/4878ef6c9b653f058200483c77aa177f-s.jpg', 'langage_book': 'English', 'tags': ['Academic & Education']}
+2023-08-12 12:48:33 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.pdfdrive.com:80
+2023-08-12 12:48:34 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2023-08-12 12:48:34 [urllib3.connectionpool] DEBUG: http://www.pdfdrive.com:80 "GET /data-analysis-with-microsoft-excel-e25241812.html HTTP/1.1" 200 None
+2023-08-12 12:48:34 [root] DEBUG: Properties added to MongoDB 64d771929f293572fe1746de
+2023-08-12 12:48:34 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.pdfdrive.com/category/5>
+{'url_book': 'http://www.pdfdrive.com/data-analysis-with-microsoft-excel-e25241812.html', 'size_book': '10.55 MB', 'year': '2010', 'number pages': '613 Pages', 'title': 'Data Analysis with Microsoft Excel', 'url_image': 'https://cdn.asaha.com/assets/thumbs/a18/a18fcb4886ec0e3bfc7854570a8776a2-s.jpg', 'langage_book': 'English', 'tags': ["Editor's Picks", 'Technology', 'Software']}
+2023-08-12 12:48:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/16> (referer: None)
+2023-08-12 12:48:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.pdfdrive.com/category/17> (referer: None)
+2023-08-12 12:48:34 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.pdfdrive.com:80
+2023-08-12 12:48:35 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2023-08-12 12:48:35 [urllib3.connectionpool] DEBUG: http://www.pdfdrive.com:80 "GET /the-secret-history-of-the-world-e20305374.html HTTP/1.1" 200 None
+2023-08-12 12:48:35 [root] DEBUG: Properties added to MongoDB 64d771939f293572fe1746df
+2023-08-12 12:48:35 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.pdfdrive.com/category/0>
+{'url_book': 'http://www.pdfdrive.com/the-secret-history-of-the-world-e20305374.html', 'size_book': '21 MB', 'year': '2006', 'number pages': '812 Pages', 'title': 'The Secret History Of The World', 'url_image': 'https://cdn.asaha.com/assets/thumbs/281/28183c5eb72be7a7fc9d316bbb5749f5-s.jpg', 'langage_book': 'English', 'tags': ['Most Popular', 'History']}
+2023-08-12 12:48:35 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.pdfdrive.com:80
+2023-08-12 12:48:36 [urllib3.connectionpool] DEBUG: http://www.pdfdrive.com:80 "GET /digital-logic-and-computer-design-by-m-morris-mano-e34332016.html HTTP/1.1" 200 None
+2023-08-12 12:48:36 [root] DEBUG: Properties added to MongoDB 64d771949f293572fe1746e0
+2023-08-12 12:48:36 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.pdfdrive.com/category/5>
+{'url_book': 'http://www.pdfdrive.com/digital-logic-and-computer-design-by-m-morris-mano-e34332016.html', 'size_book': '13.29 MB', 'year': '2006', 'number pages': '525 Pages', 'title': 'Digital Logic And Computer Design By M. Morris Mano', 'url_image': 'https://cdn.asaha.com/assets/thumbs/006/006570f777acac16006ce568fb8d9793-s.jpg', 'langage_book': 'English', 'tags': ['Engineering', 'Hardware']}
+2023-08-12 12:48:36 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.pdfdrive.com:80
+2023-08-12 12:48:37 [urllib3.connectionpool] DEBUG: http://www.pdfdrive.com:80 "GET /boundaries-when-to-say-yes-how-to-say-no-to-take-control-of-your-life-e60363043.html HTTP/1.1" 200 None
+2023-08-12 12:48:37 [root] DEBUG: Properties added to MongoDB 64d771959f293572fe1746e1
+2023-08-12 12:48:37 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.pdfdrive.com/category/4>
+{'url_book': 'http://www.pdfdrive.com/boundaries-when-to-say-yes-how-to-say-no-to-take-control-of-your-life-e60363043.html', 'size_book': '1.9 MB', 'year': '2001', 'number pages': '357 Pages', 'title': 'Boundaries: When to Say Yes, How to Say No to Take Control of Your Life', 'url_image': 'https://cdn.asaha.com/assets/thumbs/436/4363a573dce18de6452986dcee9e54eb-s.jpg', 'langage_book': 'English', 'tags': ['Self-improvement', "Editor's Picks", 'Most Popular']}
+2023-08-12 12:48:37 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.pdfdrive.com:80
+2023-08-12 12:48:38 [urllib3.connectionpool] DEBUG: http://www.pdfdrive.com:80 "GET /free-english-grammar-e335663.html HTTP/1.1" 200 None
+2023-08-12 12:48:38 [root] DEBUG: Properties added to MongoDB 64d771969f293572fe1746e2
+2023-08-12 12:48:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.pdfdrive.com/category/6>
+{'url_book': 'http://www.pdfdrive.com/free-english-grammar-e335663.html', 'size_book': '1.96 MB', 'year': '2005', 'number pages': '488 Pages', 'title': 'Free English Grammar', 'url_image': 'https://cdn.asaha.com/assets/thumbs/06b/06b029aab9ca00329cd28fd792ecf90a-s.jpg', 'langage_book': 'English', 'tags': ['Language', 'Academic & Education']}
+2023-08-12 12:48:38 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.pdfdrive.com:80
+2023-08-12 12:48:38 [urllib3.connectionpool] DEBUG: http://www.pdfdrive.com:80 "GET /on-food-and-cooking-the-science-and-lore-of-the-kitchen-e145171545.html HTTP/1.1" 200 None
+2023-08-12 12:48:38 [root] DEBUG: Properties added to MongoDB 64d771969f293572fe1746e3
+2023-08-12 12:48:38 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.pdfdrive.com/category/8>
+{'url_book': 'http://www.pdfdrive.com/on-food-and-cooking-the-science-and-lore-of-the-kitchen-e145171545.html', 'size_book': '7.38 MB', 'year': '2017', 'number pages': '3,160 Pages', 'title': 'On Food and Cooking: The Science and Lore of the Kitchen', 'url_image': 'https://cdn.asaha.com/assets/thumbs/d25/d25bcb12873a224b05ec22ae92497f6b-s.jpg', 'langage_book': 'English', 'tags': ['Food & Nutrition', "Editor's Picks", 'Most Popular']}
+2023-08-12 12:48:38 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.pdfdrive.com:80
+2023-08-12 12:48:39 [urllib3.connectionpool] DEBUG: http://www.pdfdrive.com:80 "GET /the-secret-history-of-the-world-e20305374.html HTTP/1.1" 200 None
+2023-08-12 12:48:39 [root] DEBUG: Properties added to MongoDB 64d771979f293572fe1746e4
+2023-08-12 12:48:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.pdfdrive.com/category/9>
+{'url_book': 'http://www.pdfdrive.com/the-secret-history-of-the-world-e20305374.html', 'size_book': '21 MB', 'year': '2006', 'number pages': '812 Pages', 'title': 'The Secret History Of The World', 'url_image': 'https://cdn.asaha.com/assets/thumbs/281/28183c5eb72be7a7fc9d316bbb5749f5-s.jpg', 'langage_book': 'English', 'tags': ['Most Popular', 'History']}
+2023-08-12 12:48:39 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): www.pdfdrive.com:80

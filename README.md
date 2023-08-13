@@ -30,3 +30,11 @@ pip3 install -r requirements.txt
 ```
 cd pdfdrive && scrapy crwal pdfdrive
 ```
+
+
+## Run with docker
+
+```
+docker pull darixsamani/pdfdrive
+docker run -it -e MONGO_URI=mongodb://localhost:27017 -e MONGO_DATABASE=pdfdrive darixsamani/pdfdrive
+```
