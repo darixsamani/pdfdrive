@@ -105,6 +105,7 @@ MONGO_DATABASE = os.environ.get("MONGO_DATABASE")
 # MONGO_DATABASE = "pdfdrive"
 
 ITEM_PIPELINES = {
-  "pdfdrive.pipelines.MongoDbPipeline": 1,
   "pdfdrive.pipelines.JsonWriterPipeline": 1,
+  "pdfdrive.pipelines.MongoDbPipeline": 1,
+ 
 }

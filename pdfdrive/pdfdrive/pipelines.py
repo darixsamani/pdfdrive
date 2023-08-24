@@ -6,7 +6,6 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
-from itemadapter import ItemAdapter
 import pymongo
 from scrapy.utils.project import get_project_settings
 from pdfdrive.items import PdfdriveItem
@@ -41,8 +40,8 @@ class MongoDbPipeline:
 
 
     def process_item(self, item, spider):
-
-        res = self.db[self.collection_name].insert_one(dict(item))
+        item = dict(ItemAdapter(item))
+        res = self.db[self.collection_name].insert_one(item)
         logging.debug(f"Properties added to MongoDB {res.inserted_id}")
         return item
 
@@ -59,7 +58,7 @@ class JsonWriterPipeline:
         self.file.close()
 
     def process_item(self, item, spider):
-
+        item = dict(ItemAdapter(item))
         line = json.dumps(item) + "\n"
         self.file.write(line)
         return item
