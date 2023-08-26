@@ -39,3 +39,5 @@ docker pull darixsamani/pdfdrive
 docker run -itd -e MONGO_URI=mongodb://localhost:27017 -e MONGO_DATABASE=pdfdrive darixsamani/pdfdrive
 ```
 
+## MOngoDB Screen
+![Mongo image](./mongodb.png)
