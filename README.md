@@ -1,5 +1,5 @@
 # pdfdrive
-I build this project to enhance my python skill after a long of time no coding
+I built this project to enhance my Python skills after a long of time no coding
 
 
 ## what does it do
@@ -17,7 +17,7 @@ it's a web scraper that collects information on the pdfdrive.com site and then s
 ```
 virtualenv env
 ```
-4. activate a virtual environment
+4. Activate a virtual environment
 ```
 source enc/bin/activate
 ```
@@ -26,7 +26,7 @@ source enc/bin/activate
 pip3 install -r requirements.txt
 ```
 6. Laucch Spider
-  Before changing `.env` to your URI mongodb
+  Before changing `.env` to your URI MongoDB
 ```
 cd pdfdrive && scrapy crwal pdfdrive
 ```
@@ -39,5 +39,5 @@ docker pull darixsamani/pdfdrive
 docker run -itd -e MONGO_URI=mongodb://localhost:27017 -e MONGO_DATABASE=pdfdrive darixsamani/pdfdrive
 ```
 
-## MOngoDB Screen
+## MongoDB Screen
 ![Mongo image](./mongodb.png)
