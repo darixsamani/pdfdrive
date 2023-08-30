@@ -9,17 +9,17 @@ from typing import List
 class PdfdriveItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    url_book = scrapy.Field()
-    size_book = scrapy.Field()
-    year = scrapy.Field()
-    number_pages = scrapy.Field()
-    title = scrapy.Field()
-    url_image = scrapy.Field()
-    langage_book = scrapy.Field()
-    tags = scrapy.Field()
+    url_book: str = scrapy.Field()
+    size_book :str = scrapy.Field()
+    year: int = scrapy.Field()
+    number_pages: str = scrapy.Field()
+    title :str = scrapy.Field()
+    url_image:str= scrapy.Field()
+    langage_book: str = scrapy.Field()
+    tags: List[str]= scrapy.Field()
 
 
-    def toDict(self):
+    def __dict__(self):
 
         data = dict({"url_book":self.url_book, "size_book": self.size_book,
                       "year": self.year, "number_pages": self.number_pages,
