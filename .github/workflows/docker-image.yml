@@ -22,5 +22,5 @@ jobs:
         docker logout
         echo ${{ secrets.DOCKER_PASSWORD }}| docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
         docker build -t pdfdrive .
-        docket tag pdfdrive darixsamani/pdfdrive:$date
+        docker tag pdfdrive darixsamani/pdfdrive:$date
         docker push darixsamani/pdfdrive:$date
