@@ -16,6 +16,6 @@ jobs:
       env:
         git_parse: $(git rev-parse --short HEAD) 
       run: |
-        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker build. --file Dockerfile --tag darixsamani/pdfdrive:$git_parse
+        docker login --username ${{ secrets.DOCKER_USERNAME }} -password ${{ secrets.DOCKER_PASSWORD }}
+        docker build . --file Dockerfile --tag darixsamani/pdfdrive:$git_parse
         docker push darixsamani/pdfdrive:$git_parse
