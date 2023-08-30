@@ -14,8 +14,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       env:
-        git_parse :$(git rev-parse --short HEAD) 
+        git_parse: $(git rev-parse --short HEAD) 
       run: |
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker build . --file Dockerfile --tag darixsamani/pdfdrive:$git_parse
+        docker build. --file Dockerfile --tag darixsamani/pdfdrive:$git_parse
         docker push darixsamani/pdfdrive:$git_parse
