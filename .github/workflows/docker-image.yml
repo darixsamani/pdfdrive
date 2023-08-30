@@ -20,6 +20,5 @@ jobs:
         cat $HOME/.docker/config.json
         docker logout
         echo ${{ secrets.DOCKER_PASSWORD }}| docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
-        docker build . --file Dockerfile --tag darixsamani/pdfdrive:$date
+        docker build -t darixsamani/pdfdrive:$date .
         docker push darixsamani/pdfdrive:$date
-        docker push darixsamani/pdfdrive:$git_parse
