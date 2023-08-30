@@ -14,8 +14,13 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       env:
-        git_parse :$(git rev-parse --short HEAD) 
+        date : $(date +%s)
       run: |
-        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker build . --file Dockerfile --tag darixsamani/pdfdrive:$git_parse
-        docker push darixsamani/pdfdrive:$git_parse
+        ls -al
+        export git_hash=$(git rev-parse --short HEAD) 
+        cat $HOME/.docker/config.json
+        docker logout
+        echo ${{ secrets.DOCKER_PASSWORD }}| docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
+        docker build -t pdfdrive .
+        docket tag pdfdrive darixsamani/pdfdrive:$date
+        docker push darixsamani/pdfdrive:$date
