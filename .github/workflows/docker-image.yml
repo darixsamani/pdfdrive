@@ -16,9 +16,11 @@ jobs:
       env:
         date : $(date +%s)
       run: |
+        ls -al
         export git_hash=$(git rev-parse --short HEAD) 
         cat $HOME/.docker/config.json
         docker logout
         echo ${{ secrets.DOCKER_PASSWORD }}| docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
-        docker build -t darixsamani/pdfdrive:$date .
+        docker build -t pdfdrive .
+        docket tag pdfdrive darixsamani/pdfdrive:$date
         docker push darixsamani/pdfdrive:$date
