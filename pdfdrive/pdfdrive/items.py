@@ -21,8 +21,8 @@ class PdfdriveItem(scrapy.Item):
 
     def __dict__(self):
 
-        data = dict({"url_book":self.url_book, "size_book": self.size_book,
+        data = {"url_book":self.url_book, "size_book": self.size_book,
                       "year": self.year, "number_pages": self.number_pages,
                     "title": self.title, "url_image": self.url_image,
-                     "languag_book": self.langage_book, "tags": self.tags }) 
+                     "languag_book": self.langage_book, "tags": self.tags }
         return data
