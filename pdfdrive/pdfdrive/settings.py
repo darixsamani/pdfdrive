@@ -101,8 +101,7 @@ FEED_EXPORT_ENCODING = "utf-8"
 MONGO_URI = os.environ.get("MONGO_URI")
 MONGO_DATABASE = os.environ.get("MONGO_DATABASE")
 
-# MONGO_URI = 'mongodb://localhost:27017'
-# MONGO_DATABASE = "pdfdrive"
+
 
 ITEM_PIPELINES = {
   "pdfdrive.pipelines.JsonWriterPipeline": 1,
