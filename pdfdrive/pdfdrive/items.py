@@ -14,10 +14,9 @@ class PdfdriveItem(scrapy.Item):
     year: int = scrapy.Field()
     number_pages: str = scrapy.Field()
     title :str = scrapy.Field()
-    url_image:str= scrapy.Field()
+    url_image:str = scrapy.Field()
     langage_book: str = scrapy.Field()
-    tags: List[str]= scrapy.Field()
-
+    tags: List[str] = scrapy.Field()
 
     def __dict__(self):
 
