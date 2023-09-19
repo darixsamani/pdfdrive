@@ -12,12 +12,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
+    - name: Build the Docker image and run spider
      
       run: |
-        git_hash=$(git rev-parse --short HEAD)
-        docker logout
-        echo ${{ secrets.DOCKER_PASSWORD }}| docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
+    
         docker build -t pdfdrive .
         docker exec pdfdrive echo "MONGO_URI=${{ secrets.MONGO_URI }} \n REDIS_URI=${{ secrets.REDIS_URI }} \n MONGO_DATABASE=pdfdrive \n REDIS_PASSWORD=${{ secrets.REDIS_PASSSWORD }} \n REDIS_PORT=12374" > /app/.env
         docker run -it -e MONGO_URI=${{ secrets.MONGO_URI }} -e REDIS_URI=${{ secrets.REDIS_URI }} -e MONGO_DATABASE=pdfdrive -e REDIS_PASSWORD=${{ secrets.REDIS_PASSSWORD }} -e REDIS_PORT=12374 pdfdrive
