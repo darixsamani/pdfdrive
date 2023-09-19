@@ -5,6 +5,16 @@ from bs4 import BeautifulSoup
 import requests
 import lxml
 from pdfdrive.items import PdfdriveItem
+from scrapy.utils.project import get_project_settings
+
+settings=get_project_settings()
+
+import redis
+
+r = redis.Redis(
+  host=settings.REDIS_HOST,
+  port=settings.REDIS_PORT,
+  password=settings.REDIS_PASSWORD)
 
 class PdfdriveSpider(scrapy.Spider,):
     name = "pdfdrive"
@@ -13,6 +23,7 @@ class PdfdriveSpider(scrapy.Spider,):
     'LOG_FILE': 'pdfdrive/logs/pdfdrivespider.log',
     'LOG_LEVEL': 'DEBUG'
   }
+    
 
 
     def start_requests(self):
@@ -29,22 +40,25 @@ class PdfdriveSpider(scrapy.Spider,):
             url_book = book.css('a::attr(href)').get()
             url_book = "http://www.pdfdrive.com" + url_book
 
-           
-            # get more informatonn url
-            same_book = BeautifulSoup(requests.get(url=url_book).text, "lxml")
+            if not r.exists(url_book):
+                # get more informatonn url
+                same_book = BeautifulSoup(requests.get(url=url_book).text, "lxml")
 
-            pdfdrive_item  = PdfdriveItem()
+                pdfdrive_item  = PdfdriveItem()
 
-            pdfdrive_item["url_book"] = "http://www.pdfdrive.com" + book.css('a::attr(href)').get()
-            pdfdrive_item["size_book"] = book.css("span.fi-size::text").get()
-            pdfdrive_item["year"] = int(book.css('span.fi-year::text').get())
-            pdfdrive_item["number_pages"] = book.css('span.fi-pagecount::text').get()
-            pdfdrive_item["title"] = book.css('h2::text').get()
-            pdfdrive_item["url_image"] = book.css("img.img-zoom::attr(src)").get()
-            pdfdrive_item["langage_book"] = same_book.find_all("span",{"class":"info-green"})[-1].get_text()
-            pdfdrive_item["tags"] = [tag.get_text() for tag in same_book.find_all('div', {'class': 'ebook-tags'})[0].find_all('a')]
+                pdfdrive_item["url_book"] = "http://www.pdfdrive.com" + book.css('a::attr(href)').get()
+                pdfdrive_item["size_book"] = book.css("span.fi-size::text").get()
+                pdfdrive_item["year"] = int(book.css('span.fi-year::text').get())
+                pdfdrive_item["number_pages"] = book.css('span.fi-pagecount::text').get()
+                pdfdrive_item["title"] = book.css('h2::text').get()
+                pdfdrive_item["url_image"] = book.css("img.img-zoom::attr(src)").get()
+                pdfdrive_item["langage_book"] = same_book.find_all("span",{"class":"info-green"})[-1].get_text()
+                pdfdrive_item["tags"] = [tag.get_text() for tag in same_book.find_all('div', {'class': 'ebook-tags'})[0].find_all('a')]
 
-            yield pdfdrive_item 
+                yield pdfdrive_item
+
+                r.set(url_book, "True")
+
             
             # yield {
             #     "url_book": "http://www.pdfdrive.com" + book.css('a::attr(href)').get(),
