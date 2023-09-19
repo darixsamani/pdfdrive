@@ -35,7 +35,6 @@ class MongoDbPipeline:
     def open_spider(self, spider):
         ## initializing spider
         ## opening db connection
-        print(f"MONGO DB URI : {self.mongo_uri}")
         self.client = pymongo.MongoClient(self.mongo_uri)
         self.db = self.client[self.mongo_db]
 
