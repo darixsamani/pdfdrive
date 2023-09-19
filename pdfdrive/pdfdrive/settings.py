@@ -100,7 +100,7 @@ FEED_EXPORT_ENCODING = "utf-8"
 USER_AGENT = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
 
 
-MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017")
+MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost")
 MONGO_DATABASE = os.environ.get("MONGO_DATABASE", "pdfdrive")
 REDIS_HOST = os.environ.get("REDIS_HOST", "mongodb://localhost:27017")
 REDIS_PASSWORD = os.environ.get("REDIS_PASSWORD", "")
