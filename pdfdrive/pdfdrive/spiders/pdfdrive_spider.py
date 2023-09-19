@@ -12,11 +12,12 @@ settings=get_project_settings()
 import redis
 
 r = redis.Redis(
-  host=settings.REDIS_HOST,
-  port=settings.REDIS_PORT,
-  password=settings.REDIS_PASSWORD)
+  host=settings.get("REDIS_HOST"),
+  port=settings.get("REDIS_PORT"),
+  password= settings.get("REDIS_PASSWORD") if settings.get("REDIS_PASSWORD")!="" else None
+  )
 
-class PdfdriveSpider(scrapy.Spider,):
+class PdfdriveSpider(scrapy.Spider):
     name = "pdfdrive"
 
     custom_settings = {
