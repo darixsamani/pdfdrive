@@ -16,5 +16,4 @@ RUN pip install -r requirements.txt
 
 WORKDIR /app/pdfdrive
 
-ENTRYPOINT ["scrapy", "crawl",   "pdfdrive" ]
-
+ENTRYPOINT ["scrapy", "crawl", "pdfdrive" ]
