@@ -104,6 +104,7 @@ MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017")
 MONGO_DATABASE = os.environ.get("MONGO_DATABASE", "pdfdrive")
 REDIS_HOST = os.environ.get("REDIS_HOST", "mongodb://localhost:27017")
 REDIS_PASSWORD = os.environ.get("REDIS_PASSWORD", "")
+REDIS_PORT = os.environ.get("REDIS_PORT", 6379)
 
 
 
