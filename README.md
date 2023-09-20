@@ -36,7 +36,7 @@ cd pdfdrive && scrapy crwal pdfdrive
 
 ```
 docker pull darixsamani/pdfdrive
-docker run -itd -e MONGO_URI=mongodb://localhost:27017 -e MONGO_DATABASE=pdfdrive darixsamani/pdfdrive
+ docker run -it -e MONGO_URI="mongodb://localhost" -e  MONGO_DATABASE="pdfdrive" -e REDIS_HOST="localhost" -e REDIS_PORT=6379 -e REDIS_PASSWORD=""  darixsamani/pdfdrive
 ```
 
 ## MongoDB Screen
