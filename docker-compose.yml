@@ -16,7 +16,6 @@ services:
       - REDIS_PASSWORD=""
   db:
     image: mongo
-    restart: always
   
   redis_db:
     image: redis
