@@ -19,4 +19,4 @@ jobs:
      
       run: |
 
-        docker run -e MONGO_URI=${{ secrets.MONGO_URI }} -e REDIS_URI=${{ secrets.REDIS_URI }} -e MONGO_DATABASE="pdfdrive" -e REDIS_PASSWORD=${{ secrets.REDIS_PASSSWORD }} -e REDIS_PORT=12374 -it darixsamani/pdfdrive
+        docker run -e MONGO_URI="${{ secrets.MONGO_URI }}" -e REDIS_URI="${{ secrets.REDIS_URI }}" -e MONGO_DATABASE="pdfdrive" -e REDIS_PASSWORD="${{ secrets.REDIS_PASSSWORD }}" -e REDIS_PORT="12374" -it darixsamani/pdfdrive
