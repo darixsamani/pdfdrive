@@ -9,7 +9,7 @@ it's a web scraper that collects information on the pdfdrive.com site and then s
 
 ## How to install
 
-`1. Install virtual env
+1. Install virtual env
   ```
   pip3 install virtualenv
   ```
