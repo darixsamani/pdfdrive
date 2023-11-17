@@ -1,5 +1,5 @@
 # pdfdrive
-I built this project to enhance my Python skills after a long of time no coding
+I built this project to enhance my Python skills after a long of time without coding
 
 
 ## what does it do
