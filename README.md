@@ -23,12 +23,12 @@ source enc/bin/activate
 ```
 5. Install requirements
 ```
-pip3 install -r requirements.txt
+pip3 install poetry
 ```
 6. Laucch Spider
-  Before changing `.env` to your URI MongoDB
+  Before changing `.env` to your URI MongoDB and Redis
 ```
-cd pdfdrive && scrapy crwal pdfdrive
+poetry install && cpdfdrive &&  poetry run scrapy crwal pdfdrive
 ```
 
 
