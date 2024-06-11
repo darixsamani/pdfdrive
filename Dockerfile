@@ -5,15 +5,13 @@ COPY . /app
 
 WORKDIR /app
 
-RUN pip install virtualenv 
-RUN virtualenv env
-RUN . env/bin/activate
-
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+
+RUN pip install poetry
+RUN poetry install
 
 
 
 WORKDIR /app/pdfdrive
 
-ENTRYPOINT ["scrapy", "crawl", "pdfdrive" ]
+ENTRYPOINT ["poetry", "run", "scrapy", "crawl", "pdfdrive" ]
