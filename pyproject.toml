@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pdfdrive"
+version = "0.1.0"
+description = ""
+authors = ["Darix SAMANI SIEWE <samanidarix@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Scrapy = "^2.11.2"
+bs4 = "^0.0.2"
+pymongo = "^4.7.3"
+redis = "^5.0.5"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
