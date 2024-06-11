@@ -9,23 +9,12 @@ it's a web scraper that collects information on the pdfdrive.com site and then s
 
 ## How to install
 
-1. Install virtual env
-  ```
-  pip3 install virtualenv
-  ```
-2. Create  a virtual environment
 ```
-virtualenv env
-```
-4. Activate a virtual environment
-```
-source enc/bin/activate
-```
-5. Install requirements
+1. Install requirements
 ```
 pip3 install poetry
 ```
-6. Laucch Spider
+2. Laucch Spider
   Before changing `.env` to your URI MongoDB and Redis
 ```
 poetry install && cpdfdrive &&  poetry run scrapy crwal pdfdrive
