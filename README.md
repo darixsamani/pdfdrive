@@ -9,10 +9,10 @@ it's a web scraper that collects information on the pdfdrive.com site and then s
 
 ## How to install
 
-```
 1. Install requirements
 ```
 pip3 install poetry
+
 ```
 2. Laucch Spider
   Before changing `.env` to your URI MongoDB and Redis
