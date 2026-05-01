@@ -1,6 +1,6 @@
 FROM python:3.8
 
-MAINTAINER Darix SAMANI
+MAINTAINER Darix SAMANI SIEWE
 COPY . /app
 
 WORKDIR /app
