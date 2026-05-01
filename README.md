@@ -17,7 +17,7 @@ pip3 install poetry
 2. Laucch Spider
   Before changing `.env` to your URI MongoDB and Redis
 ```
-poetry install && cpdfdrive &&  poetry run scrapy crwal pdfdrive
+poetry install && pdfdrive &&  poetry run scrapy crwal pdfdrive
 ```
 
 
